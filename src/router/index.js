@@ -60,7 +60,7 @@ export const constantRoutes = [
     redirect: '/pay-management',
     name: 'SwitchNetworkManagement',
     meta: {
-      title: '花呗支付',
+      title: '付款码支付',
       icon: 'menu_icon'
     },
     children: [

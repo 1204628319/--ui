@@ -1,21 +1,21 @@
 <template>
   <div class="headBox" style="text-align:center">
-    <div class="headLeft" >
-      <span>花呗支付</span>
+    <div class="headLeft">
+      <span>付款码支付</span>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'AppHeader',
-    methods: {
-      logout() {
-        window.sessionStorage.removeItem('token')
-        this.$router.push({ path: '/login' })
-      }
+export default {
+  name: 'AppHeader',
+  methods: {
+    logout() {
+      window.sessionStorage.removeItem('token')
+      this.$router.push({ path: '/login' })
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
