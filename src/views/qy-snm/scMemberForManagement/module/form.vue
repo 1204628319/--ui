@@ -26,9 +26,6 @@
         </el-form-item>
       </div>
       <div v-if="active==2" class="info" align="left">
-        <el-form-item label="手续费费率" prop="consRate">
-          <el-input v-model="form.consRate" readonly="true" class="commonWidth" />
-        </el-form-item>
         <el-form-item label="结算卡号" prop="settleCardNo">
           <el-input v-model="form.settleCardNo" placeholder="请输入结算卡号" class="commonWidth" />
         </el-form-item>
@@ -81,7 +78,6 @@ export default {
         merState: '',
         merCity: '',
         merAddress: '',
-        consRate: '0.35',
         settleCardNo: '',
         settleMobile: ''
       },
@@ -109,10 +105,6 @@ export default {
         settleCardNo: [
           { required: true, message: '请输入结算卡号', trigger: 'change' },
           { min: 0, max: 64, message: '长度在64个字符以内', trigger: 'blur' }
-        ],
-        consRate: [
-          { required: true, message: '请输入手续费费率', trigger: 'change' },
-          { min: 0, max: 32, message: '长度在32个字符以内', trigger: 'blur' }
         ],
         merName: [
           { required: true, message: '请输入商户名称', trigger: 'change' },
@@ -144,7 +136,6 @@ export default {
         merState: '',
         merCity: '',
         merAddress: '',
-        consRate: '0.35',
         settleCardNo: '',
         settleMobile: ''
       }
