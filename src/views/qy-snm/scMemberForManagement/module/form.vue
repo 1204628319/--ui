@@ -1,10 +1,10 @@
 <template>
-  <el-dialog :append-to-body="true" :before-close="handleCommonCloseDialog" :visible.sync="dialog"  title= "发起进件" width="350px" class="cus-dialog">
+  <el-dialog :append-to-body="true" :before-close="handleCommonCloseDialog" :visible.sync="dialog" title="发起进件" width="350px" class="cus-dialog">
     <el-steps :active="active" finish-status="success" simple style="margin-top: -20px">
       <el-step title="输入身份信息" />
       <el-step title="输入结算银行卡信息" />
     </el-steps>
-    <el-form ref="form" width="300px" v-closeDialog size="small" :model="form" :rules="rules" label-width="100px" style="margin-top: 20px">
+    <el-form ref="form" v-closeDialog width="300px" size="small" :model="form" :rules="rules" label-width="100px" style="margin-top: 20px">
       <div v-if="active==1">
         <el-form-item label="真实姓名" prop="realName">
           <el-input v-model="form.realName" placeholder="请输入真实姓名" class="commonWidth" />
@@ -27,7 +27,7 @@
       </div>
       <div v-if="active==2" class="info" align="left">
         <el-form-item label="手续费费率" prop="consRate">
-          <el-input readonly="true" v-model="form.consRate" class="commonWidth" />
+          <el-input v-model="form.consRate" readonly="true" class="commonWidth" />
         </el-form-item>
         <el-form-item label="结算卡号" prop="settleCardNo">
           <el-input v-model="form.settleCardNo" placeholder="请输入结算卡号" class="commonWidth" />
@@ -81,7 +81,7 @@ export default {
         merState: '',
         merCity: '',
         merAddress: '',
-        consRate: '0.85',
+        consRate: '0.35',
         settleCardNo: '',
         settleMobile: ''
       },
@@ -144,7 +144,7 @@ export default {
         merState: '',
         merCity: '',
         merAddress: '',
-        consRate: '0.85',
+        consRate: '0.35',
         settleCardNo: '',
         settleMobile: ''
       }
