@@ -1,7 +1,7 @@
 <template>
   <div class="headBox" style="text-align:center">
     <div class="headLeft">
-      <span>付款码支付</span>
+      <span>绿呗支付</span>
     </div>
   </div>
 </template>

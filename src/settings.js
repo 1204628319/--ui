@@ -1,5 +1,5 @@
 module.exports = {
-  title: '付款码支付',
+  title: '绿呗支付',
 
   /**
    * @type {boolean} true | false
