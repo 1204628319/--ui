@@ -91,6 +91,15 @@ export const constantRoutes = [
           title: '上传照片',
           icon: 'menu_sub_icon_normal'
         }
+      },
+      {
+        path: 'memberStatistics',
+        component: () => import('@/views/qy-snm/memberStatistics'),
+        name: 'memberStatistics',
+        meta: {
+          title: '商户交易金额统计',
+          icon: 'menu_sub_icon_normal'
+        }
       }
     ]
   }

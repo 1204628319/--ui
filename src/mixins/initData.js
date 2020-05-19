@@ -30,8 +30,14 @@ export default {
             resolve(res)
             return
           }
-          this.total = res.totalCount
-          this.data = res.data
+          if (!res.data || Object.prototype.toString.call(res.data) === '[object Array]') {
+            this.total = res.totalCount
+            this.data = res.data
+          } else {
+            this.total = res.data.totalCount
+            this.data = res.data.data
+          }
+
           setTimeout(() => {
             this.loading = false
           }, this.time)
