@@ -6,7 +6,7 @@
         <div class="rowSection-content-right">
           <eHeader :query="query" :sup-this="supThis" />
           <el-table v-loading="loading" v-el-height-adaptive-table="{bottomOffset: 55}" :data="data" height="this.$constant.STYLES.TABLE_HEIGHT" stripe border size="mini">
-            <el-table-column label="序号" width="50" type="index" />
+            <el-table-column label="ID" prop="id" min-width="190" :show-overflow-tooltip="true" />
             <el-table-column label="结算手机号" prop="settleMobile" min-width="80" :show-overflow-tooltip="true" />
             <el-table-column label="身份证号码" prop="certId" min-width="120" :show-overflow-tooltip="true" />
             <el-table-column label="状态" prop="signStatusName" min-width="60" :show-overflow-tooltip="true" />
